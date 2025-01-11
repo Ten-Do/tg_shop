@@ -1,0 +1,29 @@
+.BannerCarousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 var(--screen-x-indent);
+  scroll-padding: 0 var(--screen-x-indent);
+
+  &-Heading {
+    font: var(--font-heading-h2);
+    padding: 0 var(--screen-x-indent);
+  }
+
+  &-Item {
+    border-radius: var(--border-radius-l);
+    min-width: calc(100vw - 2 * var(--screen-x-indent));
+    height: 100px;
+    background-color: white;
+    scroll-snap-align: start;
+    // box-shadow: var(--shadow-bottom-l);
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

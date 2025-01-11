@@ -1,0 +1,17 @@
+.ItemCarousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 var(--screen-x-indent);
+  scroll-padding: 0 var(--screen-x-indent);
+
+  &-Heading {
+    font: var(--font-heading-h2);
+    padding: 0 var(--screen-x-indent);
+  }
+
+  &-Item {
+    scroll-snap-align: start;
+  }
+}

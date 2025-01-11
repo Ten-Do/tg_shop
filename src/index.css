@@ -1,0 +1,61 @@
+:root {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: 'Mulish', serif;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* VARIABLES */
+  --bg-color: #f8f8f8;
+  --bg-color-contrast: #ffffff;
+  --fg-color-default: #262525;
+  --fg-color-contrast: #000000;
+  --fg-color-opacity: #00000099;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-primary: #667080;
+  --color-primary-deep: #393f48;
+  --color-secondary: #eef1f4;
+  --color-secondary-deep: #c3c6c9;
+  --color-grey: #d9d9d9;
+  --color-grey-2: #e5e5e5;
+  --color-paranja: rgba(255, 255, 255, 0.8);
+
+  /* SPACING */
+  --screen-x-indent: 24px;
+
+  /* FONTS */
+  --font-heading-h2: 700 20px/50px 'Mulish';
+  --font-body-l-strong: 600 18px/24px 'Mulish';
+
+  /* RADIUS */
+  --border-radius-l: 18px;
+  --border-radius-xl: 32px;
+
+  /* SHADOWS */
+  --shadow-bottom-l: 0px 40px 40px #0000001a;
+  --shadow-s: 0px 0px 16px #00000010;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--fg-color-default);
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+} */
+
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}

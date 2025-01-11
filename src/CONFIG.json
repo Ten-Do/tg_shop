@@ -1,0 +1,56 @@
+{
+  "pages": {
+    "/": {
+      "content": [
+        {
+          "block_type": "HEADER"
+        },
+        {
+          "heading": "Новости",
+          "block_type": "BANNER_CAROUSEL",
+          "source": {
+            "path": "news"
+          }
+        },
+        {
+          "heading": "Новые поступления",
+          "block_type": "ITEM_CAROUSEL",
+          "source": {
+            "path": "items"
+          }
+        },
+        {
+          "heading": "Популярное",
+          "block_type": "ITEM_CAROUSEL",
+          "source": {
+            "path": "items"
+          }
+        }
+      ]
+    },
+    "/catalog": {
+      "content": [
+        {
+          "block_type": "ITEM_GRID",
+          "source": {
+            "path": "items"
+          }
+        }
+      ]
+    },
+    "/favorites": {
+      "content": []
+    },
+    "/cart": {
+      "content": []
+    }
+  },
+  "logo": { "src": "/logo/logo.png", "h": 50, "w": 150 },
+  "baseAPIURL": "/api/v1/",
+  "navigation": {
+    "HOME": "/",
+    "CATALOG": "/catalog",
+    "FAVORITE": "/favorites",
+    "CART": "/cart"
+  }
+}
