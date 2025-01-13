@@ -1,0 +1,16 @@
+.Tooltip {
+  &-Trigger {
+    border-radius: 100%;
+    height: 26px;
+    width: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: var(--font-heading-h3);
+    background-color: var(--color-grey);
+  }
+
+  &-Content {
+    padding: 4px var(--screen-x-indent) var(--screen-x-indent);
+  }
+}

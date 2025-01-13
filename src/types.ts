@@ -12,6 +12,9 @@ export interface IBlockTypeItemCarousel {
   source: {
     path: string;
   };
+  item?: {
+    link_to?: string;
+  };
 }
 
 export interface IBlockTypeItemGrid {
@@ -19,6 +22,9 @@ export interface IBlockTypeItemGrid {
   source: {
     path: string;
   };
+  item?: {
+    link_to?: string;
+  }
 }
 
 export interface IBlockTypeHeader {
@@ -29,12 +35,35 @@ export interface IBlockTypeHeader {
   };
 }
 
+export interface IBlockTypeItem {
+  block_type: 'ITEM';
+}
+
 export type IBlockType =
   | IBlockTypeBannerCarousel
   | IBlockTypeItemCarousel
   | IBlockTypeItemGrid
-  | IBlockTypeHeader;
+  | IBlockTypeHeader
+  | IBlockTypeItem;
 
 // NAVIGATION
 
 export type INavigationOption = 'HOME' | 'CATALOG' | 'CART' | 'FAVORITE';
+
+// API
+export interface IItem {
+  id: string;
+  name: string;
+  price: {
+    value: string;
+    currency: string;
+  };
+  photos: {
+    logo: string;
+    extended: string[];
+  };
+  tags: string[];
+  description: string;
+  category: number;
+  status: string;
+}

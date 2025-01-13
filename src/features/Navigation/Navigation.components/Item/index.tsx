@@ -29,7 +29,6 @@ export const NavigationItem: React.FC<NavigationItemProps> = ({
   icon,
 }) => {
   const location = useLocation();
-  console.log(location);
 
   return (
     <Link

@@ -1,0 +1,40 @@
+.Contact {
+  display: inline-block;
+  background-color: var(--color-blue);
+  border-radius: var(--border-radius-button);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  padding: 2px 4px;
+
+  img {
+    width: 36px;
+    height: 36px;
+  }
+
+  &_tg {
+    background-color: #2aabee;
+  }
+
+  &_vk {
+    background-color: #0077ff;
+  }
+
+  &_whatsapp {
+    background-color: #28b04b;
+  }
+
+  &_Expanded {
+    font: var(--font-description-l);
+    display: flex;
+    width: fit-content;
+    text-wrap: nowrap;
+    align-items: center;
+  }
+
+  &_ExpandedLabel {
+    margin-right: 6px;
+  }
+}

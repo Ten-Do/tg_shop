@@ -17,6 +17,9 @@
           "block_type": "ITEM_CAROUSEL",
           "source": {
             "path": "items"
+          },
+          "item": {
+            "link_to": "/item/:id"
           }
         },
         {
@@ -24,6 +27,9 @@
           "block_type": "ITEM_CAROUSEL",
           "source": {
             "path": "items"
+          },
+          "item": {
+            "link_to": "/item/:id"
           }
         }
       ]
@@ -31,9 +37,15 @@
     "/catalog": {
       "content": [
         {
+          "block_type": "HEADER"
+        },
+        {
           "block_type": "ITEM_GRID",
           "source": {
             "path": "items"
+          },
+          "item": {
+            "link_to": "/item/:id"
           }
         }
       ]
@@ -43,14 +55,22 @@
     },
     "/cart": {
       "content": []
+    },
+    "/item/:id": {
+      "content": [
+        {
+          "block_type": "ITEM",
+          "source": {
+            "path": "items"
+          }
+        }
+      ]
     }
   },
   "logo": { "src": "/logo/logo.png", "h": 50, "w": 150 },
   "baseAPIURL": "/api/v1/",
   "navigation": {
     "HOME": "/",
-    "CATALOG": "/catalog",
-    "FAVORITE": "/favorites",
-    "CART": "/cart"
+    "CATALOG": "/catalog"
   }
 }

@@ -1,0 +1,24 @@
+.Tag {
+  border-radius: var(--border-radius-s);
+  background-color: var(--bg-surface-2);
+  // color: var(--fg-inverted);
+
+  &-Value {
+    font: var(--font-description-m-strong);
+  }
+
+  &_s {
+    padding: 2px 7px;
+    font: var(--font-description-m);
+  }
+
+  &_m {
+    padding: 4px 12px;
+    font: var(--font-body-s);
+  }
+
+  &_l {
+    padding: 6px 16px;
+    font: var(--font-body-m);
+  }
+}

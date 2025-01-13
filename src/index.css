@@ -1,6 +1,6 @@
 :root {
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: 'Mulish', serif;
+  /* font-family: 'Mulish', system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: 'Mulish', sans-serif;
 
   color-scheme: light dark;
 
@@ -11,10 +11,14 @@
 
   /* VARIABLES */
   --bg-color: #f8f8f8;
-  --bg-color-contrast: #ffffff;
+  --bg-surface-1: #ffffff;
+  --bg-surface-2: #eef1f4;
+  --bg-surface-3: #667080;
+  --bg-surface-4: #393f48;
   --fg-color-default: #262525;
   --fg-color-contrast: #000000;
-  --fg-color-opacity: #00000099;
+  --fg-color-muted: #00000099;
+  --fg-inverted: #ffffff;
   --color-white: #ffffff;
   --color-black: #000000;
   --color-primary: #667080;
@@ -29,22 +33,52 @@
   --screen-x-indent: 24px;
 
   /* FONTS */
-  --font-heading-h2: 700 20px/50px 'Mulish';
-  --font-body-l-strong: 600 18px/24px 'Mulish';
+  --font-heading-h1: 700 28px/32px 'Mulish';
+  --font-heading-h2: 700 22px/50px 'Mulish';
+  --font-heading-h3: 700 18px/20px 'Mulish';
+  --font-heading-h4: 700 16px/20px 'Mulish';
+  --font-heading-h5: 700 14px/20px 'Mulish';
+  --font-title: 500 14px/24px 'Mulish';
+  --font-body-l: 400 18px/26px 'Mulish';
+  --font-body-l-strong: 500 18px/26px 'Mulish';
+  --font-body-m: 400 16px/24px 'Mulish';
+  --font-body-m-strong: 500 16px/24px 'Mulish';
+  --font-body-s: 400 14px/20px 'Mulish';
+  --font-body-s-strong: 500 14px/20px 'Mulish';
+  --font-description-l: 400 12px/16px 'Mulish';
+  --font-description-l-strong: 500 12px/16px 'Mulish';
+  --font-description-m: 400 11px/16px 'Mulish';
+  --font-description-m-strong: 500 11px/16px 'Mulish';
+  --font-description-s: 400 10px/12px 'Mulish';
+  --font-description-s-strong: 500 10px/12px 'Mulish';
 
   /* RADIUS */
+  --border-radius-s: 4px;
+  --border-radius-m: 8px;
   --border-radius-l: 18px;
   --border-radius-xl: 32px;
 
   /* SHADOWS */
   --shadow-bottom-l: 0px 40px 40px #0000001a;
+  --shadow-bottom-m: 0px 20px 20px #0000001a;
+  --shadow-bottom-s: 0px 8px 16px #0000001a;
   --shadow-s: 0px 0px 16px #00000010;
+
+  /* BOTTOM DRAWER */
+  --rsbs-backdrop-bg: rgba(0, 0, 0, 0.6);
+  --rsbs-bg: var(--bg-color);
+  --rsbs-handle-bg: hsla(0, 0%, 0%, 0.14);
+  --rsbs-max-w: auto;
+  --rsbs-ml: env(safe-area-inset-left);
+  --rsbs-mr: env(safe-area-inset-right);
+  --rsbs-overlay-rounded: 16px; 
+ 
+
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--fg-color-default);
-  padding-top: 36px;
   padding-bottom: 36px;
 }
 /* @media (prefers-color-scheme: dark) {

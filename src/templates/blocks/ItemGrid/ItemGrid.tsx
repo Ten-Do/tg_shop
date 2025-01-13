@@ -1,12 +1,9 @@
+import Masonry from 'react-layout-masonry';
+import './ItemGrid.scss';
+import { ItemCardM } from '../../../features/ItemCard/ItemCard-M';
 import { Link } from 'react-router-dom';
-import { ItemCardL } from '../../../features/ItemCard/ItemCard-L';
-import { IBlockTypeItemCarousel } from '../../../types';
-import './ItemCarousel.scss';
+import { IBlockTypeItemGrid } from '../../../types';
 import { buildUrlFromTemplate } from '../../../features/shared/utils/buildUrlFromTemplate';
-
-export interface IItemCarouselProps {
-  config: IBlockTypeItemCarousel;
-}
 
 const data = [
   {
@@ -97,19 +94,31 @@ const data = [
   },
 ];
 
-export const ItemCarousel = ({ config }: IItemCarouselProps) => {
+interface IItemGridProps {
+  config: IBlockTypeItemGrid;
+}
+
+export const ItemGrid = ({ config }: IItemGridProps) => {
   return (
-    <div className="ItemCarousel-Container">
-      <h2 className="ItemCarousel-Heading">{config.heading}</h2>
-      <div className="ItemCarousel">
-        {data.map((item) => (
-          <div key={item.id} className="ItemCarousel-Item">
-            <Link to={buildUrlFromTemplate(config.item?.link_to, item)}>
-              <ItemCardL data={item} />
-            </Link>
-          </div>
-        ))}
+    <div className="ItemGrid-Container">
+      {/* <h2 className="ItemGrid-Title">{title}</h2> */}
+      <div className="ItemGrid">
+        <ItemGridApi config={config} />
       </div>
     </div>
+  );
+};
+
+const ItemGridApi = ({ config }: IItemGridProps) => {
+  return (
+    <Masonry columns={2} gap={8}>
+      {data.map((item, i) => (
+        <Link
+          to={buildUrlFromTemplate(config.item?.link_to, item)}
+          className="ItemGrid-Item">
+          <ItemCardM key={i} data={item} />
+        </Link>
+      ))}
+    </Masonry>
   );
 };

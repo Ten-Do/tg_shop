@@ -1,7 +1,9 @@
 import { Header } from '../../features/Header/Header';
 import { IBlockType } from '../../types';
 import { BannerCarousel } from '../blocks/BannerCarousel';
+import { Item } from '../blocks/Item';
 import { ItemCarousel } from '../blocks/ItemCarousel';
+import { ItemGrid } from '../blocks/ItemGrid';
 import './Page.scss';
 
 export interface IPageProps {
@@ -14,9 +16,11 @@ export const Page = ({ content }: IPageProps) => {
     } else if (item.block_type === 'BANNER_CAROUSEL') {
       return <BannerCarousel key={i} config={item} />;
     } else if (item.block_type === 'ITEM_GRID') {
-      return <div key={i}>ITEM_GRID</div>;
+      return <ItemGrid key={i} config={item} />;
     } else if (item.block_type === 'ITEM_CAROUSEL') {
       return <ItemCarousel key={i} config={item} />;
+    } else if (item.block_type === 'ITEM') {
+      return <Item key={i} />;
     }
   });
 
