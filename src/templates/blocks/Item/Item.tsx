@@ -1,11 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CircleButton } from '../../../components/CircleButton';
+import { CircleButton } from '@/components/CircleButton';
 // import { Loader } from '../../../components/Loader';
 import { ItemImageCarousel } from './Item.components/Item-ImageCarousel/ItemImageCarousel';
 import { ItemActionButton } from './Item.components/Item-ActionButtons/ItemActionButton';
-import { Accordeon } from '../../../components/Accordeon';
-import { InfoDivided } from '../../../components/InfoDivided/InfoDivided';
+import { Accordeon } from '@/components/Accordeon';
+import { InfoDivided } from '@/components/InfoDivided/InfoDivided';
 import { ItemTags } from './Item.components/Item-Tags/ItemTags';
 
 // type IITemInfoKeys = keyof IItemFullInfo;

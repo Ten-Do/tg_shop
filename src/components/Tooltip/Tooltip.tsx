@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Tooltip.scss';
-import { BottomSheet } from 'react-spring-bottom-sheet-updated';
-import 'react-spring-bottom-sheet/dist/style.css';
+import { BottomSheet } from '@/components/BottomSheet';
+
 export interface ITooltipProps {
   children: React.ReactNode;
 }

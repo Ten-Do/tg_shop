@@ -1,5 +1,5 @@
-import { MenuBurgerButton } from '../Menu';
-import { logo } from '../../CONFIG.json';
+import { MenuBurgerButton } from '@/features/Menu';
+import { logo } from '@/CONFIG.json';
 import './Header.scss';
 export const Header = () => {
   return (

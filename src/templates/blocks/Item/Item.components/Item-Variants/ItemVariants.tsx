@@ -1,10 +1,23 @@
-import { IItemFullInfo } from '../../../../types';
 import '../../Item.scss';
-interface ItemVariantsProps {
-  variants: IItemFullInfo['variants'];
+
+import React from 'react';
+
+// TODO: refactor types
+interface ItemVariantOption {
+  value: string;
+  label?: string;
 }
 
-export const ItemVariants = ({ variants }: ItemVariantsProps) => {
+interface ItemVariant {
+  label: string;
+  options?: ItemVariantOption[];
+}
+
+interface ItemVariantsProps {
+  variants?: ItemVariant[];
+}
+
+export const ItemVariants: React.FC<ItemVariantsProps> = ({ variants }) => {
   return (
     <div className="Item-VariantsContainer">
       {variants?.map((variant) => (

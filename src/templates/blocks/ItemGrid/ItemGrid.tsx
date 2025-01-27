@@ -1,9 +1,9 @@
 import Masonry from 'react-layout-masonry';
-import './ItemGrid.scss';
-import { ItemCardM } from '../../../features/ItemCard/ItemCard-M';
+import { ItemCardM } from '@/features/ItemCard/ItemCard-M';
 import { Link } from 'react-router-dom';
-import { IBlockTypeItemGrid } from '../../../types';
-import { buildUrlFromTemplate } from '../../../features/shared/utils/buildUrlFromTemplate';
+import { IBlockTypeItemGrid } from '@/types';
+import { buildUrlFromTemplate } from '@/features/shared/utils/buildUrlFromTemplate';
+import './ItemGrid.scss';
 
 const data = [
   {

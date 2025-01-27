@@ -71,9 +71,7 @@
   --rsbs-max-w: auto;
   --rsbs-ml: env(safe-area-inset-left);
   --rsbs-mr: env(safe-area-inset-right);
-  --rsbs-overlay-rounded: 16px; 
- 
-
+  --rsbs-overlay-rounded: 16px;
 }
 
 body {
@@ -81,12 +79,78 @@ body {
   color: var(--fg-color-default);
   padding-bottom: 36px;
 }
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    /* DARK THEME VARIABLES */
+    --bg-color: #121212; /* Dark background */
+    --bg-surface-1: #1e1e1e; /* Slightly lighter background */
+    --bg-surface-2: #2a2a2a; /* Even lighter background for contrast */
+    --bg-surface-3: #444b54; /* Muted surface for cards or elements */
+    --bg-surface-4: #5c636d; /* Highlighted surface */
+    --fg-color-default: #e0e0e0; /* Light foreground for text */
+    --fg-color-contrast: #ffffff; /* High contrast foreground for headings */
+    --fg-color-muted: #e0e0e099; /* Muted foreground for subtitles */
+    --fg-inverted: #121212; /* Dark foreground for light backgrounds */
+    --color-white: #e0e0e0; /* Adjusted white for dark theme */
+    --color-black: #000000; /* Unchanged */
+    --color-primary: #ffffff; /* Adjusted primary color for better contrast */
+    --color-primary-deep: #5c636d; /* Adjusted deep primary */
+    --color-secondary: #3b414a; /* Adjusted secondary color */
+    --color-secondary-deep: #8e939b; /* Deep secondary */
+    --color-grey: #666666; /* Neutral grey for dark theme */
+    --color-grey-2: #4d4d4d; /* Darker grey for borders, etc. */
+    --color-paranja: rgba(0, 0, 0, 0.6); /* Adjusted overlay for dark theme */
+
+    /* SPACING (unchanged) */
+    --screen-x-indent: 24px;
+
+    /* FONTS (unchanged) */
+    --font-heading-h1: 700 28px/32px 'Mulish';
+    --font-heading-h2: 700 22px/50px 'Mulish';
+    --font-heading-h3: 700 18px/20px 'Mulish';
+    --font-heading-h4: 700 16px/20px 'Mulish';
+    --font-heading-h5: 700 14px/20px 'Mulish';
+    --font-title: 500 14px/24px 'Mulish';
+    --font-body-l: 400 18px/26px 'Mulish';
+    --font-body-l-strong: 500 18px/26px 'Mulish';
+    --font-body-m: 400 16px/24px 'Mulish';
+    --font-body-m-strong: 500 16px/24px 'Mulish';
+    --font-body-s: 400 14px/20px 'Mulish';
+    --font-body-s-strong: 500 14px/20px 'Mulish';
+    --font-description-l: 400 12px/16px 'Mulish';
+    --font-description-l-strong: 500 12px/16px 'Mulish';
+    --font-description-m: 400 11px/16px 'Mulish';
+    --font-description-m-strong: 500 11px/16px 'Mulish';
+    --font-description-s: 400 10px/12px 'Mulish';
+    --font-description-s-strong: 500 10px/12px 'Mulish';
+
+    /* RADIUS (unchanged) */
+    --border-radius-s: 4px;
+    --border-radius-m: 8px;
+    --border-radius-l: 18px;
+    --border-radius-xl: 32px;
+
+    /* SHADOWS */
+    --shadow-bottom-l: 0px 40px 40px #00000040; /* Stronger shadow for dark theme */
+    --shadow-bottom-m: 0px 20px 20px #00000040;
+    --shadow-bottom-s: 0px 8px 16px #00000040;
+    --shadow-s: 0px 0px 16px #00000020;
+
+    /* BOTTOM DRAWER */
+    --rsbs-backdrop-bg: rgba(
+      255,
+      255,
+      255,
+      0.1
+    ); /* Lightened overlay for better contrast */
+    --rsbs-bg: var(--bg-color);
+    --rsbs-handle-bg: hsla(0, 0%, 100%, 0.14); /* Adjusted for dark theme */
+    --rsbs-max-w: auto;
+    --rsbs-ml: env(safe-area-inset-left);
+    --rsbs-mr: env(safe-area-inset-right);
+    --rsbs-overlay-rounded: 16px;
   }
-} */
+}
 
 *::-webkit-scrollbar {
   display: none;

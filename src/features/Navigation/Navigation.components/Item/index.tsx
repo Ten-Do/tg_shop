@@ -3,7 +3,7 @@ import CartSVG from '../../Navigation.assets/shopping_cart.svg?react';
 import HeartSVG from '../../Navigation.assets/favorite.svg?react';
 import CatalogSVG from '../../Navigation.assets/catalog.svg?react';
 import HomeSVG from '../../Navigation.assets/home.svg?react';
-import { INavigationOption } from '../../../../types';
+import { INavigationOption } from '@/types';
 import './Item.scss';
 
 interface NavigationItemProps {

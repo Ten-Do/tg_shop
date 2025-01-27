@@ -1,4 +1,4 @@
-import burgerMenuSVG from '../../../assets/icons/burger_menu.svg';
+import burgerMenuSVG from '@/assets/icons/burger_menu.svg';
 
 export const Button = () => {
   return (

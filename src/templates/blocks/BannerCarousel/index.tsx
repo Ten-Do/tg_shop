@@ -1,4 +1,4 @@
-import { IBlockTypeBannerCarousel } from '../../../types';
+import { IBlockTypeBannerCarousel } from '@/types';
 import './BannerCarousel.scss';
 
 export interface IBannerCarouselProps {

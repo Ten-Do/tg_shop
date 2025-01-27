@@ -1,6 +1,6 @@
-import { navigation } from '../../CONFIG.json';
+import { navigation } from '@/CONFIG.json';
 import { NavigationItem } from './Navigation.components/Item';
-import { INavigationOption } from '../../types';
+import { INavigationOption } from '@/types';
 import './Navigation.scss';
 
 const items = Object.entries(navigation).map(([key, value]) => (

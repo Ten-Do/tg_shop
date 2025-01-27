@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import { ItemCardL } from '../../../features/ItemCard/ItemCard-L';
-import { IBlockTypeItemCarousel } from '../../../types';
+import { ItemCardL } from '@/features/ItemCard/ItemCard-L';
+import { IBlockTypeItemCarousel } from '@/types';
+import { buildUrlFromTemplate } from '@/features/shared/utils/buildUrlFromTemplate';
 import './ItemCarousel.scss';
-import { buildUrlFromTemplate } from '../../../features/shared/utils/buildUrlFromTemplate';
 
 export interface IItemCarouselProps {
   config: IBlockTypeItemCarousel;

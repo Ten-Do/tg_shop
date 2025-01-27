@@ -1,9 +1,13 @@
 import { useState } from 'react';
 
 import '../../Item.scss';
-import { Contact } from '../../../../../components/Contact';
+import { Contact, IContact } from '@/components/Contact';
 
-export const ItemContacts = ({ contacts }) => {
+export interface IItemContactsProps {
+  contacts: IContact[];
+}
+
+export const ItemContacts = ({ contacts }: IItemContactsProps) => {
   const [expanded, setExpanded] = useState(Array(contacts.length).fill(false));
   if (!contacts.length) return null;
   return (

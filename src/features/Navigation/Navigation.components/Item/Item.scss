@@ -7,11 +7,15 @@
 
   path {
     transition: fill 0.3s;
+    
+    @media (prefers-color-scheme: dark) {
+      fill: var(--color-primary-deep);
+    }
   }
 
   &_active {
     path {
-      fill: var(--color-primary-deep);
+      fill: var(--color-primary);
     }
   }
 }

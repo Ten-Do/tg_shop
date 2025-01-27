@@ -1,6 +1,6 @@
 import './Contact.scss';
 
-interface IContact {
+export interface IContact {
   type: string;
   value: string;
   label?: string;

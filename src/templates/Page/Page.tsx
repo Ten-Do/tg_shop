@@ -1,5 +1,5 @@
-import { Header } from '../../features/Header/Header';
-import { IBlockType } from '../../types';
+import { Header } from '@/features/Header/Header';
+import { IBlockType } from '@/types';
 import { BannerCarousel } from '../blocks/BannerCarousel';
 import { Item } from '../blocks/Item';
 import { ItemCarousel } from '../blocks/ItemCarousel';

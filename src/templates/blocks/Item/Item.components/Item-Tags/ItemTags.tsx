@@ -1,10 +1,10 @@
-import { Tag } from "../../../../../components/Tag";
+import { Tag } from '@/components/Tag';
 
 interface ItemTagsProps {
   items: {
     label: string;
     value?: string;
-    size?: "s" | "m" | "l";
+    size?: 's' | 'm' | 'l';
   }[];
 }
 export const ItemTags = ({ items }: ItemTagsProps) => {

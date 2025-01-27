@@ -2,7 +2,7 @@ import styles from './InfoDivided.module.css';
 
 export interface IInfoDividedProps {
   label: string;
-  value: string;
+  value: string | number;
 }
 
 export const InfoDivided = ({ label, value }: IInfoDividedProps) => {
