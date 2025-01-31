@@ -114,9 +114,10 @@ const ItemGridApi = ({ config }: IItemGridProps) => {
     <Masonry columns={2} gap={8}>
       {data.map((item, i) => (
         <Link
+          key={i}
           to={buildUrlFromTemplate(config.item?.link_to, item)}
           className="ItemGrid-Item">
-          <ItemCardM key={i} data={item} />
+          <ItemCardM data={item} />
         </Link>
       ))}
     </Masonry>

@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@telegram-apps/sdk-react':
+        specifier: ^3.0.1
+        version: 3.0.1(@types/react@18.3.18)(react@18.3.1)(typescript@5.6.3)
       '@types/react-lottie':
         specifier: ^1.2.10
         version: 1.2.10
@@ -1500,6 +1503,48 @@ packages:
   '@swc/types@0.1.17':
     resolution: {integrity: sha512-V5gRru+aD8YVyCOMAjMpWR1Ui577DD5KSJsHP8RAxopAH22jFz6GZd/qxqjO6MJHQhcsjvjOFXyDhyLQUnMveQ==}
 
+  '@telegram-apps/bridge@1.9.2':
+    resolution: {integrity: sha512-SJLcNWLXhbbZr9MiqFH/g2ceuitSJKMxUIZysK4zUNyTUNuonrQG80Q/yrO+XiNbKUj8WdDNM86NBARhuyyinQ==}
+
+  '@telegram-apps/bridge@2.0.1':
+    resolution: {integrity: sha512-TbIrsQUOJy9E6KWSqPRHyyZ8cBhzSbL/JuO/iskNvdJxGVJuxFcKLrB/uvb7BI37cK2q/ganqVJuKQC5aiSf+Q==}
+
+  '@telegram-apps/navigation@1.0.13':
+    resolution: {integrity: sha512-TsUueB5LQp77GQHoMa93nq26Uw7GJjrFCPbyseMVU7aBBxAc+8CV2IYytRwcVp5sv/q7ThK5X4JaKn2V1yBHDQ==}
+
+  '@telegram-apps/sdk-react@3.0.1':
+    resolution: {integrity: sha512-se0Bm6yP8Q5nDpCmkENmxGh/4rO2ocfcoZ4Jy1VDClPOzLBLst/jyGDexaOhUV6SplxXmDyqXlAJwtMUat8ZdQ==}
+    peerDependencies:
+      '@types/react': ^17.0.0 || ^18.0.0 || ^19.0.0
+      react: ^17.0.0 || ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+
+  '@telegram-apps/sdk@3.0.0':
+    resolution: {integrity: sha512-0vvRvfT937ruhM7tDCE9BOJbVLu4iSBTbPC7mhttd/zh/CG0QUgHyc6ydIsG9UUo4tHLml58EBX+UuvelGD1Iw==}
+
+  '@telegram-apps/signals@1.1.1':
+    resolution: {integrity: sha512-vz37r8lemGpPzDiBRfqpXYBynzmy3SFnY6zfHsTZABTYYt0b0WQZyU5mFDqqqugGhka78Gy11xmr9csgy4YgGA==}
+
+  '@telegram-apps/toolkit@1.1.1':
+    resolution: {integrity: sha512-+vhKx6ngfvjyTE6Xagl3z1TPVbfx5s7xAkcYzCdHYUo6T60jLIqLgyZMcI1UPoIAMuMu1pHoO+p8QNCj/+tFmw==}
+
+  '@telegram-apps/toolkit@2.0.0':
+    resolution: {integrity: sha512-1GKTLBNme1Phu/gFvgS9NWPq+LhPfzSIfnwhcF9I/6tCdufrLRcVaSMRiK9R4VDYD6iZUyj+a2l250qWAxxjQQ==}
+
+  '@telegram-apps/transformers@1.2.2':
+    resolution: {integrity: sha512-vvMwXckd1D7Ozc0h66PSUwF5QLrRV9HlGJFFeBuUex8QEk5mSPtsJkLiqB8aBbwuFDa91+TUSM/CxqPZO/e9YQ==}
+
+  '@telegram-apps/transformers@2.0.0':
+    resolution: {integrity: sha512-MoYEvQBvzi5Hn0vibG/CBf3wyzQJ0rfnawa7Ezv8Q84f/7tsa3T8MF9a4Hhf/PrqaJxz0WLv9TjwQni10qKCrQ==}
+
+  '@telegram-apps/types@1.2.1':
+    resolution: {integrity: sha512-so4HLh7clur0YyMthi9KVIgWoGpZdXlFOuQjk3+Q5NAvJZ11nAheBSwPlGw/Ko92+zwvrSBE/lQyN2+p17RP+w==}
+
+  '@telegram-apps/types@2.0.0':
+    resolution: {integrity: sha512-yF499FJK82a2IDNDAQdrmVH3sgFZl/QFNdVZKgWpgtunIVJ1fres5wi9+4aUBRVIdQwZOZZqB/AOvYYuYXsq3Q==}
+
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
 
@@ -1781,6 +1826,9 @@ packages:
 
   base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
+
+  better-promises@0.4.0:
+    resolution: {integrity: sha512-AcKkTUSd4o1vMf41eBbHW1NkY7vrXeNI6etitGdQE54WFXsF2wkfonrKA06Za7lViRNyT/cMvj5z+DScqhYW8A==}
 
   body-scroll-lock@3.1.5:
     resolution: {integrity: sha512-Yi1Xaml0EvNA0OYWxXiYNqY24AfWkbA6w5vxE7GWxtKfzIbZM+Qw+aSmkgsbWzbHiy/RCSkUZBplVxTA+E4jJg==}
@@ -2080,6 +2128,9 @@ packages:
 
   error-ex@1.3.2:
     resolution: {integrity: sha512-7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==}
+
+  error-kid@0.0.4:
+    resolution: {integrity: sha512-x+yQhY56SorLMnX6kOf+z3JCv2QBurcWEDcIjgxYtVr4fGeCfAtOdZOCyWttkHHDFPtL2PqnaRUmphbmALJd9w==}
 
   error-stack-parser@2.1.4:
     resolution: {integrity: sha512-Sk5V6wVazPhq5MhpO+AUxJn5x7XSXGl1R93Vn7i+zS15KDVxQijejNCrz8340/2bgLBjR9GtEG8ZVKONDjcqGQ==}
@@ -2879,6 +2930,9 @@ packages:
 
   minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
+
+  mitt@3.0.1:
+    resolution: {integrity: sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==}
 
   mkdirp@0.5.6:
     resolution: {integrity: sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==}
@@ -3842,6 +3896,14 @@ packages:
     resolution: {integrity: sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==}
     engines: {node: '>= 0.4.0'}
 
+  valibot@1.0.0-beta.14:
+    resolution: {integrity: sha512-tLyV2rE5QL6U29MFy3xt4AqMrn+/HErcp2ZThASnQvPMwfSozjV1uBGKIGiegtZIGjinJqn0SlBdannf18wENA==}
+    peerDependencies:
+      typescript: '>=5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   varint@6.0.0:
     resolution: {integrity: sha512-cXEIW6cfr15lFv563k4GuVuW/fiwjknytD37jIOLSdSWuOI6WnO/oKwmP2FQTU2l01LP8/M5TSAJpzUaGe3uWg==}
 
@@ -4058,7 +4120,7 @@ snapshots:
 
   '@babel/helper-annotate-as-pure@7.25.9':
     dependencies:
-      '@babel/types': 7.26.3
+      '@babel/types': 7.26.5
 
   '@babel/helper-compilation-targets@7.25.9':
     dependencies:
@@ -4076,7 +4138,7 @@ snapshots:
       '@babel/helper-optimise-call-expression': 7.25.9
       '@babel/helper-replace-supers': 7.26.5(@babel/core@7.26.0)
       '@babel/helper-skip-transparent-expression-wrappers': 7.25.9
-      '@babel/traverse': 7.26.4
+      '@babel/traverse': 7.26.5
       semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
@@ -4101,8 +4163,8 @@ snapshots:
 
   '@babel/helper-member-expression-to-functions@7.25.9':
     dependencies:
-      '@babel/traverse': 7.26.4
-      '@babel/types': 7.26.3
+      '@babel/traverse': 7.26.5
+      '@babel/types': 7.26.5
     transitivePeerDependencies:
       - supports-color
 
@@ -4124,7 +4186,7 @@ snapshots:
 
   '@babel/helper-optimise-call-expression@7.25.9':
     dependencies:
-      '@babel/types': 7.26.3
+      '@babel/types': 7.26.5
 
   '@babel/helper-plugin-utils@7.26.5': {}
 
@@ -4133,7 +4195,7 @@ snapshots:
       '@babel/core': 7.26.0
       '@babel/helper-annotate-as-pure': 7.25.9
       '@babel/helper-wrap-function': 7.25.9
-      '@babel/traverse': 7.26.4
+      '@babel/traverse': 7.26.5
     transitivePeerDependencies:
       - supports-color
 
@@ -4148,8 +4210,8 @@ snapshots:
 
   '@babel/helper-skip-transparent-expression-wrappers@7.25.9':
     dependencies:
-      '@babel/traverse': 7.26.4
-      '@babel/types': 7.26.3
+      '@babel/traverse': 7.26.5
+      '@babel/types': 7.26.5
     transitivePeerDependencies:
       - supports-color
 
@@ -4162,8 +4224,8 @@ snapshots:
   '@babel/helper-wrap-function@7.25.9':
     dependencies:
       '@babel/template': 7.25.9
-      '@babel/traverse': 7.26.4
-      '@babel/types': 7.26.3
+      '@babel/traverse': 7.26.5
+      '@babel/types': 7.26.5
     transitivePeerDependencies:
       - supports-color
 
@@ -4184,7 +4246,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
-      '@babel/traverse': 7.26.4
+      '@babel/traverse': 7.26.5
     transitivePeerDependencies:
       - supports-color
 
@@ -4211,7 +4273,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
-      '@babel/traverse': 7.26.4
+      '@babel/traverse': 7.26.5
     transitivePeerDependencies:
       - supports-color
 
@@ -4368,7 +4430,7 @@ snapshots:
       '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
       '@babel/helper-remap-async-to-generator': 7.25.9(@babel/core@7.26.0)
-      '@babel/traverse': 7.26.4
+      '@babel/traverse': 7.26.5
     transitivePeerDependencies:
       - supports-color
 
@@ -4414,7 +4476,7 @@ snapshots:
       '@babel/helper-compilation-targets': 7.25.9
       '@babel/helper-plugin-utils': 7.26.5
       '@babel/helper-replace-supers': 7.26.5(@babel/core@7.26.0)
-      '@babel/traverse': 7.26.4
+      '@babel/traverse': 7.26.5
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -4481,7 +4543,7 @@ snapshots:
       '@babel/core': 7.26.0
       '@babel/helper-compilation-targets': 7.25.9
       '@babel/helper-plugin-utils': 7.26.5
-      '@babel/traverse': 7.26.4
+      '@babel/traverse': 7.26.5
     transitivePeerDependencies:
       - supports-color
 
@@ -4527,7 +4589,7 @@ snapshots:
       '@babel/helper-module-transforms': 7.26.0(@babel/core@7.26.0)
       '@babel/helper-plugin-utils': 7.26.5
       '@babel/helper-validator-identifier': 7.25.9
-      '@babel/traverse': 7.26.4
+      '@babel/traverse': 7.26.5
     transitivePeerDependencies:
       - supports-color
 
@@ -4637,7 +4699,7 @@ snapshots:
       '@babel/helper-module-imports': 7.25.9
       '@babel/helper-plugin-utils': 7.26.5
       '@babel/plugin-syntax-jsx': 7.25.9(@babel/core@7.26.0)
-      '@babel/types': 7.26.3
+      '@babel/types': 7.26.5
     transitivePeerDependencies:
       - supports-color
 
@@ -4818,7 +4880,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.26.5
-      '@babel/types': 7.26.3
+      '@babel/types': 7.26.5
       esutils: 2.0.3
 
   '@babel/preset-typescript@7.26.0(@babel/core@7.26.0)':
@@ -5217,7 +5279,7 @@ snapshots:
 
   '@react-native/codegen@0.76.6(@babel/preset-env@7.26.0(@babel/core@7.26.0))':
     dependencies:
-      '@babel/parser': 7.26.3
+      '@babel/parser': 7.26.5
       '@babel/preset-env': 7.26.0(@babel/core@7.26.0)
       glob: 7.2.3
       hermes-parser: 0.23.1
@@ -5586,26 +5648,98 @@ snapshots:
     dependencies:
       '@swc/counter': 0.1.3
 
+  '@telegram-apps/bridge@1.9.2':
+    dependencies:
+      '@telegram-apps/signals': 1.1.1
+      '@telegram-apps/toolkit': 1.1.1
+      '@telegram-apps/transformers': 1.2.2
+      '@telegram-apps/types': 1.2.1
+
+  '@telegram-apps/bridge@2.0.1(typescript@5.6.3)':
+    dependencies:
+      '@telegram-apps/signals': 1.1.1
+      '@telegram-apps/toolkit': 2.0.0
+      '@telegram-apps/transformers': 2.0.0(typescript@5.6.3)
+      '@telegram-apps/types': 2.0.0
+      better-promises: 0.4.0
+      error-kid: 0.0.4
+      mitt: 3.0.1
+      valibot: 1.0.0-beta.14(typescript@5.6.3)
+    transitivePeerDependencies:
+      - typescript
+
+  '@telegram-apps/navigation@1.0.13':
+    dependencies:
+      '@telegram-apps/bridge': 1.9.2
+      '@telegram-apps/signals': 1.1.1
+      '@telegram-apps/toolkit': 1.1.1
+
+  '@telegram-apps/sdk-react@3.0.1(@types/react@18.3.18)(react@18.3.1)(typescript@5.6.3)':
+    dependencies:
+      '@telegram-apps/sdk': 3.0.0(typescript@5.6.3)
+      react: 18.3.1
+    optionalDependencies:
+      '@types/react': 18.3.18
+    transitivePeerDependencies:
+      - typescript
+
+  '@telegram-apps/sdk@3.0.0(typescript@5.6.3)':
+    dependencies:
+      '@telegram-apps/bridge': 2.0.1(typescript@5.6.3)
+      '@telegram-apps/navigation': 1.0.13
+      '@telegram-apps/signals': 1.1.1
+      '@telegram-apps/toolkit': 2.0.0
+      '@telegram-apps/transformers': 2.0.0(typescript@5.6.3)
+      '@telegram-apps/types': 2.0.0
+      better-promises: 0.4.0
+      error-kid: 0.0.4
+      valibot: 1.0.0-beta.14(typescript@5.6.3)
+    transitivePeerDependencies:
+      - typescript
+
+  '@telegram-apps/signals@1.1.1': {}
+
+  '@telegram-apps/toolkit@1.1.1': {}
+
+  '@telegram-apps/toolkit@2.0.0': {}
+
+  '@telegram-apps/transformers@1.2.2':
+    dependencies:
+      '@telegram-apps/toolkit': 1.1.1
+      '@telegram-apps/types': 1.2.1
+
+  '@telegram-apps/transformers@2.0.0(typescript@5.6.3)':
+    dependencies:
+      '@telegram-apps/toolkit': 2.0.0
+      '@telegram-apps/types': 2.0.0
+      valibot: 1.0.0-beta.14(typescript@5.6.3)
+    transitivePeerDependencies:
+      - typescript
+
+  '@telegram-apps/types@1.2.1': {}
+
+  '@telegram-apps/types@2.0.0': {}
+
   '@types/babel__core@7.20.5':
     dependencies:
-      '@babel/parser': 7.26.3
-      '@babel/types': 7.26.3
+      '@babel/parser': 7.26.5
+      '@babel/types': 7.26.5
       '@types/babel__generator': 7.6.8
       '@types/babel__template': 7.4.4
       '@types/babel__traverse': 7.20.6
 
   '@types/babel__generator@7.6.8':
     dependencies:
-      '@babel/types': 7.26.3
+      '@babel/types': 7.26.5
 
   '@types/babel__template@7.4.4':
     dependencies:
-      '@babel/parser': 7.26.3
-      '@babel/types': 7.26.3
+      '@babel/parser': 7.26.5
+      '@babel/types': 7.26.5
 
   '@types/babel__traverse@7.20.6':
     dependencies:
-      '@babel/types': 7.26.3
+      '@babel/types': 7.26.5
 
   '@types/cookie@0.6.0': {}
 
@@ -5880,7 +6014,7 @@ snapshots:
   babel-plugin-jest-hoist@29.6.3:
     dependencies:
       '@babel/template': 7.25.9
-      '@babel/types': 7.26.3
+      '@babel/types': 7.26.5
       '@types/babel__core': 7.20.5
       '@types/babel__traverse': 7.20.6
 
@@ -5955,6 +6089,10 @@ snapshots:
   balanced-match@1.0.2: {}
 
   base64-js@1.5.1: {}
+
+  better-promises@0.4.0:
+    dependencies:
+      error-kid: 0.0.4
 
   body-scroll-lock@3.1.5: {}
 
@@ -6263,6 +6401,8 @@ snapshots:
   error-ex@1.3.2:
     dependencies:
       is-arrayish: 0.2.1
+
+  error-kid@0.0.4: {}
 
   error-stack-parser@2.1.4:
     dependencies:
@@ -6872,7 +7012,7 @@ snapshots:
   istanbul-lib-instrument@5.2.1:
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/parser': 7.26.3
+      '@babel/parser': 7.26.5
       '@istanbuljs/schema': 0.1.3
       istanbul-lib-coverage: 3.2.2
       semver: 6.3.1
@@ -6976,7 +7116,7 @@ snapshots:
   jscodeshift@0.14.0(@babel/preset-env@7.26.0(@babel/core@7.26.0)):
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/parser': 7.26.3
+      '@babel/parser': 7.26.5
       '@babel/plugin-proposal-class-properties': 7.18.6(@babel/core@7.26.0)
       '@babel/plugin-proposal-nullish-coalescing-operator': 7.18.6(@babel/core@7.26.0)
       '@babel/plugin-proposal-optional-chaining': 7.21.0(@babel/core@7.26.0)
@@ -7168,9 +7308,9 @@ snapshots:
 
   metro-source-map@0.81.0:
     dependencies:
-      '@babel/traverse': 7.26.4
-      '@babel/traverse--for-generate-function-map': '@babel/traverse@7.26.4'
-      '@babel/types': 7.26.3
+      '@babel/traverse': 7.26.5
+      '@babel/traverse--for-generate-function-map': '@babel/traverse@7.26.5'
+      '@babel/types': 7.26.5
       flow-enums-runtime: 0.0.6
       invariant: 2.2.4
       metro-symbolicate: 0.81.0
@@ -7196,9 +7336,9 @@ snapshots:
   metro-transform-plugins@0.81.0:
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/generator': 7.26.3
+      '@babel/generator': 7.26.5
       '@babel/template': 7.25.9
-      '@babel/traverse': 7.26.4
+      '@babel/traverse': 7.26.5
       flow-enums-runtime: 0.0.6
       nullthrows: 1.1.1
     transitivePeerDependencies:
@@ -7207,9 +7347,9 @@ snapshots:
   metro-transform-worker@0.81.0:
     dependencies:
       '@babel/core': 7.26.0
-      '@babel/generator': 7.26.3
-      '@babel/parser': 7.26.3
-      '@babel/types': 7.26.3
+      '@babel/generator': 7.26.5
+      '@babel/parser': 7.26.5
+      '@babel/types': 7.26.5
       flow-enums-runtime: 0.0.6
       metro: 0.81.0
       metro-babel-transformer: 0.81.0
@@ -7228,11 +7368,11 @@ snapshots:
     dependencies:
       '@babel/code-frame': 7.26.2
       '@babel/core': 7.26.0
-      '@babel/generator': 7.26.3
-      '@babel/parser': 7.26.3
+      '@babel/generator': 7.26.5
+      '@babel/parser': 7.26.5
       '@babel/template': 7.25.9
-      '@babel/traverse': 7.26.4
-      '@babel/types': 7.26.3
+      '@babel/traverse': 7.26.5
+      '@babel/types': 7.26.5
       accepts: 1.3.8
       chalk: 4.1.2
       ci-info: 2.0.0
@@ -7297,6 +7437,8 @@ snapshots:
       brace-expansion: 2.0.1
 
   minimist@1.2.8: {}
+
+  mitt@3.0.1: {}
 
   mkdirp@0.5.6:
     dependencies:
@@ -8344,6 +8486,10 @@ snapshots:
       object.getownpropertydescriptors: 2.1.8
 
   utils-merge@1.0.1: {}
+
+  valibot@1.0.0-beta.14(typescript@5.6.3):
+    optionalDependencies:
+      typescript: 5.6.3
 
   varint@6.0.0: {}
 

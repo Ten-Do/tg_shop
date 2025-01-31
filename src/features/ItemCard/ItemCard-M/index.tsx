@@ -7,8 +7,8 @@ export const ItemCardM = ({ data }: IItemCardProps) => {
     <div className="ItemCardM">
       <div className="ItemCardM-ImageCarouselContainer">
         <div className="ItemCardM-ImageCarousel">
-          {images.map((image) => (
-            <div key={image} className="ItemCardM-ImageCarouselItem">
+          {images.map((image, i) => (
+            <div key={i} className="ItemCardM-ImageCarouselItem">
               <img src={image} alt="" />
             </div>
           ))}

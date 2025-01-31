@@ -26,8 +26,8 @@ export const ItemCardL = ({ data }: IItemCardLProps) => {
   return (
     <div className="ItemCardL">
       <div className="ItemCardL-ImageCarousel">
-        {images.map((image) => (
-          <div key={image} className="ItemCardL-ImageCarouselItem">
+        {images.map((image, i) => (
+          <div key={i} className="ItemCardL-ImageCarouselItem">
             <img src={image} alt="" />
           </div>
         ))}

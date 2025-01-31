@@ -3,23 +3,26 @@ import ErrorPage from './error/error';
 
 import { pages } from '@/CONFIG.json';
 import { Page } from '@/templates/Page/Page';
-import { Navigation } from '@/features/Navigation/Navigation';
 import { IBlockType } from '@/types';
+import { Root } from './Root';
 // import { IPageItem } from '@/types';
 
 const routes = Object.keys(pages).map((key) => {
   return {
     path: key,
     element: (
-      <>
-        <Page
-          content={pages[key as keyof typeof pages].content as IBlockType[]}
-        />
-        <Navigation />
-      </>
+      <Page
+        content={pages[key as keyof typeof pages].content as IBlockType[]}
+      />
     ),
-    errorElement: <ErrorPage />,
   };
 });
 
-export const router = createBrowserRouter(routes);
+export const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: routes,
+  },
+]);
