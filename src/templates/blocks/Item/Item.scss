@@ -1,8 +1,8 @@
 .Item {
-  padding: 0 16px 16px;
+  padding: 0 var(--screen-x-indent) 16px;
   background-color: var(--bg-surface-1);
   position: relative;
-  
+
   &::after {
     content: '';
     position: absolute;
@@ -11,7 +11,11 @@
     right: 0;
 
     height: 30px;
-    background: linear-gradient(to bottom, var(--bg-surface-1), var(--bg-color));
+    background: linear-gradient(
+      to bottom,
+      var(--bg-surface-1),
+      var(--bg-color)
+    );
   }
 
   &-Back {
@@ -40,8 +44,8 @@
       content: '';
       position: absolute;
       bottom: 0;
-      left: -16px;
-      right: -16px;
+      left: calc(-1 * var(--screen-x-indent));
+      right: calc(-1 * var(--screen-x-indent));
       height: 6px;
       background: linear-gradient(to top, var(--bg-color), transparent);
     }
@@ -64,8 +68,8 @@
   }
 
   &-ImageCarousel {
-    margin: 0 -16px 16px;
-    width: calc(100% + 32px);
+    margin: 0 calc(-1 * var(--screen-x-indent)) 16px;
+    width: calc(100% + 2 * var(--screen-x-indent));
     min-height: 400px;
     display: flex;
     overflow-x: auto;
@@ -82,25 +86,52 @@
   }
 
   &-Price {
-    font: var(--font-body-l-strong);
+    font-size: 28px;
+    font-weight: 800;
   }
 
   &-Name {
-    font: var(--font-body-l-strong);
+    font-size: 24px;
+    font-weight: 800;
   }
-  
+
   &-Description {
     font: var(--font-body-m);
     margin-top: 16px;
     color: var(--fg-color-muted);
   }
 
-  &-ActionButton {
+  &-ActionButtonsPlaceholder {
+    height: 100px;
+  }
+
+  &-ActionButtons {
+    box-shadow: var(--shadow-m);
+    border-top-left-radius: var(--border-radius-l);
+    border-top-right-radius: var(--border-radius-l);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-surface-1);
+    padding: 16px var(--screen-x-indent);
+    z-index: 7;
+  }
+
+  &-ActionButtonContainer {
     display: flex;
-    gap: 8px;
+    gap: 16px;
     align-items: center;
     justify-content: space-between;
-    margin-top: 16px;
+  }
+
+  &-ActionButton {
+    height: 48px;
+    flex: 1;
+  }
+
+  &-ActionButtonHintText {
+    padding-bottom: 100px;
   }
 
   &-Tags {

@@ -3,9 +3,9 @@
   border: none;
   background-color: var(--color-paranja);
   // icon bg center
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 32px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 48px;
   height: 48px;
 

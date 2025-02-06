@@ -5,6 +5,7 @@ import { Item } from '../blocks/Item';
 import { ItemCarousel } from '../blocks/ItemCarousel';
 import { ItemGrid } from '../blocks/ItemGrid';
 import './Page.scss';
+import {Search} from '../blocks/Search';
 
 export interface IPageProps {
   content: IBlockType[];
@@ -21,6 +22,8 @@ export const Page = ({ content }: IPageProps) => {
       return <ItemCarousel key={i} config={item} />;
     } else if (item.block_type === 'ITEM') {
       return <Item key={i} />;
+    } else if (item.block_type === 'SEARCH') {
+      return <Search config={item} key={i} />;
     }
   });
 

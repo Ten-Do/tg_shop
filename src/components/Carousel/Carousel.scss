@@ -1,0 +1,63 @@
+.Carousel {
+  max-width: 48rem;
+  margin: auto;
+  --slide-spacing: 1px;
+  --slide-size: 100%;
+
+  &-Viewport {
+    overflow: hidden;
+  }
+
+  &-Container {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(var(--slide-spacing) * -1);
+  }
+
+  &-Slide {
+    transform: translate3d(0, 0, 0);
+    flex: 0 0 var(--slide-size);
+    min-width: 0;
+    padding-left: var(--slide-spacing);
+
+    & * {
+      user-select: none;
+    }
+  }
+
+  &-Controls {
+    position: relative;
+  }
+
+  &-Dots {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+  }
+
+  &-Dot {
+    background-color: transparent;
+    touch-action: manipulation;
+    display: inline-flex;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-paranja);
+
+    &_selected {
+      background-color: var(--bg-surface-4);
+    }
+  }
+}

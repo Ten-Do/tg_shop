@@ -1,0 +1,21 @@
+.Search {
+  margin: 0 var(--screen-x-indent);
+  &-Button {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-surface-1);
+    border: 2px solid var(--bg-surface-2);
+    border-radius: var(--border-radius-l);
+    padding: 12px 16px;
+    color: var(--fg-color-muted);
+    font: var(--font-body-l-strong);
+    cursor: pointer;
+  }
+
+  &-Categories {
+    margin: 16px calc(-1 * var(--screen-x-indent)) 0;
+  }
+}

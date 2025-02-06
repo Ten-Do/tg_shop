@@ -2,7 +2,7 @@ import './CircleButton.scss';
 
 export interface ICircleButtonProps {
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  icon: string;
+  icon: React.ReactNode;
   label: string;
   className?: string;
   withoutBg?: boolean;
@@ -23,8 +23,8 @@ export const CircleButton = ({
         className
       }
       aria-label={label}
-      onClick={onClick}
-      style={{ backgroundImage: `url(${icon})` }}
-    />
+      onClick={onClick}>
+      {icon}
+    </button>
   );
 };

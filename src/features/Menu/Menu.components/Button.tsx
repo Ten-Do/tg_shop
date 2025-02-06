@@ -1,9 +1,9 @@
-import burgerMenuSVG from '@/assets/icons/burger_menu.svg';
+import { FiMenu } from "react-icons/fi";
 
 export const Button = () => {
   return (
     <button aria-label="Открыть меню">
-      <img src={burgerMenuSVG} alt="" role="presentation" />
+      <FiMenu size={32} />
     </button>
   );
 };

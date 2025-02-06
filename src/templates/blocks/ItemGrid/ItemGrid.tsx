@@ -1,4 +1,3 @@
-import Masonry from 'react-layout-masonry';
 import { ItemCardM } from '@/features/ItemCard/ItemCard-M';
 import { Link } from 'react-router-dom';
 import { IBlockTypeItemGrid } from '@/types';
@@ -31,6 +30,10 @@ const data = [
       logo: 'https://i.pinimg.com/originals/a0/1c/49/a01c493ce94cc0132af22f6e98c47945.jpg',
       extended: [
         'https://avatars.yandex.net/get-music-content/1781407/0e4d452f.a.13148537-1/m1000x1000?webp=false',
+        'https://i.pinimg.com/originals/a0/1c/49/a01c493ce94cc0132af22f6e98c47945.jpg', 'https://avatars.yandex.net/get-music-content/1781407/0e4d452f.a.13148537-1/m1000x1000?webp=false',
+        'https://i.pinimg.com/originals/a0/1c/49/a01c493ce94cc0132af22f6e98c47945.jpg', 'https://avatars.yandex.net/get-music-content/1781407/0e4d452f.a.13148537-1/m1000x1000?webp=false',
+        'https://i.pinimg.com/originals/a0/1c/49/a01c493ce94cc0132af22f6e98c47945.jpg', 'https://avatars.yandex.net/get-music-content/1781407/0e4d452f.a.13148537-1/m1000x1000?webp=false',
+        'https://i.pinimg.com/originals/a0/1c/49/a01c493ce94cc0132af22f6e98c47945.jpg', 'https://avatars.yandex.net/get-music-content/1781407/0e4d452f.a.13148537-1/m1000x1000?webp=false',
         'https://i.pinimg.com/originals/a0/1c/49/a01c493ce94cc0132af22f6e98c47945.jpg',
       ],
     },
@@ -103,23 +106,15 @@ export const ItemGrid = ({ config }: IItemGridProps) => {
     <div className="ItemGrid-Container">
       {/* <h2 className="ItemGrid-Title">{title}</h2> */}
       <div className="ItemGrid">
-        <ItemGridApi config={config} />
+        {data.map((item, i) => (
+          <Link
+            key={i}
+            to={buildUrlFromTemplate(config.item?.link_to, item)}
+            className="ItemGrid-Item">
+            <ItemCardM data={item} />
+          </Link>
+        ))}
       </div>
     </div>
-  );
-};
-
-const ItemGridApi = ({ config }: IItemGridProps) => {
-  return (
-    <Masonry columns={2} gap={8}>
-      {data.map((item, i) => (
-        <Link
-          key={i}
-          to={buildUrlFromTemplate(config.item?.link_to, item)}
-          className="ItemGrid-Item">
-          <ItemCardM data={item} />
-        </Link>
-      ))}
-    </Masonry>
   );
 };

@@ -63,6 +63,7 @@
   --shadow-bottom-m: 0px 20px 20px #0000001a;
   --shadow-bottom-s: 0px 8px 16px #0000001a;
   --shadow-s: 0px 0px 16px #00000010;
+  --shadow-m: 0px 0px 32px #0000001a;
 
   /* BOTTOM DRAWER */
   --rsbs-backdrop-bg: rgba(0, 0, 0, 0.6);

@@ -1,6 +1,19 @@
+export interface IBlockTypeSearch {
+  block_type: 'SEARCH';
+  input?: {
+    placeholder?: string;
+  };
+  categories?: {
+    source: {
+      path: string;
+    };
+  };
+}
+
 export interface IBlockTypeBannerCarousel {
   block_type: 'BANNER_CAROUSEL';
   heading?: string;
+  size?: 'm' | 'l';
   source: {
     path: string;
   };
@@ -24,7 +37,7 @@ export interface IBlockTypeItemGrid {
   };
   item?: {
     link_to?: string;
-  }
+  };
 }
 
 export interface IBlockTypeHeader {
@@ -40,6 +53,7 @@ export interface IBlockTypeItem {
 }
 
 export type IBlockType =
+  | IBlockTypeSearch
   | IBlockTypeBannerCarousel
   | IBlockTypeItemCarousel
   | IBlockTypeItemGrid
@@ -50,20 +64,37 @@ export type IBlockType =
 
 export type INavigationOption = 'HOME' | 'CATALOG' | 'CART' | 'FAVORITE';
 
-// API
-export interface IItem {
-  id: string;
+//============== API ==============\\
+export type IResource = 'categories' | 'goods';
+export type IMediaType = 'GOOD';
+
+export interface IMedia {
+  id: number;
   name: string;
-  price: {
-    value: string;
-    currency: string;
-  };
-  photos: {
-    logo: string;
-    extended: string[];
-  };
-  tags: string[];
-  description: string;
-  category: number;
+  size: number;
+  storageFileName: string;
+  mediaType: IMediaType;
+}
+
+export interface IRetailer {
+  id: number;
+  name: string;
+  enabled: boolean;
+}
+
+export interface ICaegory {
+  id: number;
+  name: string;
   status: string;
+  retailer: IRetailer;
+}
+
+export interface IItem {
+  id: number;
+  name: string;
+  price: number;
+  enabled: boolean;
+  categories: ICaegory[];
+  retailer: IRetailer;
+  media: IMedia[];
 }

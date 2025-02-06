@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CircleButton } from '@/components/CircleButton';
 // import { Loader } from '../../../components/Loader';
@@ -7,13 +6,15 @@ import { ItemActionButton } from './Item.components/Item-ActionButtons/ItemActio
 import { Accordeon } from '@/components/Accordeon';
 import { InfoDivided } from '@/components/InfoDivided/InfoDivided';
 import { ItemTags } from './Item.components/Item-Tags/ItemTags';
+import { FiArrowLeft } from 'react-icons/fi';
 
 // type IITemInfoKeys = keyof IItemFullInfo;
 const data = {
   id: '4',
   status: 'Active',
   name: 'Adidas Sneakers White Color',
-  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vitae deleniti cupiditate omnis nam, voluptates fugiat accusamus tempore consequuntur incidunt! Dolores perspiciatis reiciendis nesciunt cum dolorum, aut voluptate officia. Quos!',
+  description:
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vitae deleniti cupiditate omnis nam, voluptates fugiat accusamus tempore consequuntur incidunt! Dolores perspiciatis reiciendis nesciunt cum dolorum, aut voluptate officia. Quos!',
   category: 1,
   price: {
     value: '5430',
@@ -38,55 +39,57 @@ export const Item: React.FC = () => {
         onClick={() => navigate(-1)}
         label="Назад"
         className="Item-Back"
-        icon="/css/arrow-left.svg"
+        withoutBg
+        icon={<FiArrowLeft size={32} opacity={0.9} />}
       />
       <ItemImageCarousel images={data.photos?.extended || []} />
-      <div className='Item-MainInfo'>
+      <div className="Item-MainInfo">
         {/* name */}
-        <p className='Item-Name'>{data.name}</p>
+        <p className="Item-Name">{data.name}</p>
         {/* price */}
-        <p className='Item-Price'>{data.price.value} {data.price.currency}</p>
-        {/* buttons */}
-        <ItemActionButton />
+        <p className="Item-Price">{data.price.value}&#x20bd;</p>
         {/* description */}
-        <p className='Item-Description'>{data.description}</p>
-        </div>
-<div style={{ marginTop: '20px' }}>
-  {/* Tags */}
-  <ItemTags items={data.tags.map((tag) => ({ label: tag }))} />
-</div>
-<div style={{ marginTop: '20px' }}>
-  <p style={{ marginBottom: '10px', font: 'var(--font-heading-h3)' }}>Дополнительная информация</p>
-  <InfoDivided label="Категория" value={data.category} />
-  <InfoDivided label="Статус" value={data.status} />
-  <InfoDivided label="Категория" value={data.category} />
-  <InfoDivided label="Статус" value={data.status} />
-  <InfoDivided label="Категория" value={data.category} />
-  <InfoDivided label="Статус" value={data.status} />
-  <InfoDivided label="Категория" value={data.category} />
-  <InfoDivided label="Статус" value={data.status} />
-</div>
-<div style={{ marginTop: '20px' }}>
-
-<Accordeon items={[
-  {
-    label: 'Описание',
-    value: data.description,
-  },
-  {
-    label: 'Характеристики',
-    value: data.description,
-  },
-  {
-    label: 'Доставка',
-    value: data.description,
-  },
-  {
-    label: 'Возврат',
-    value: data.description,
-  },
-]} />
-</div>
+        <p className="Item-Description">{data.description}</p>
+      </div>
+      <div style={{ marginTop: '20px' }}>
+        {/* Tags */}
+        <ItemTags items={data.tags.map((tag) => ({ label: tag }))} />
+      </div>
+      <div style={{ marginTop: '20px' }}>
+        <p style={{ marginBottom: '10px', font: 'var(--font-heading-h3)' }}>
+          Дополнительная информация
+        </p>
+        <InfoDivided label="Категория" value={data.category} />
+        <InfoDivided label="Статус" value={data.status} />
+        <InfoDivided label="Категория" value={data.category} />
+        <InfoDivided label="Статус" value={data.status} />
+        <InfoDivided label="Категория" value={data.category} />
+        <InfoDivided label="Статус" value={data.status} />
+        <InfoDivided label="Категория" value={data.category} />
+        <InfoDivided label="Статус" value={data.status} />
+      </div>
+      <div style={{ marginTop: '20px' }}>
+        <Accordeon
+          items={[
+            {
+              label: 'Описание',
+              value: data.description,
+            },
+            {
+              label: 'Характеристики',
+              value: data.description,
+            },
+            {
+              label: 'Доставка',
+              value: data.description,
+            },
+            {
+              label: 'Возврат',
+              value: data.description,
+            },
+          ]}
+        />
+      </div>
 
       {/* <Loader /> */}
       {/* {isFetching ? (
@@ -108,6 +111,8 @@ export const Item: React.FC = () => {
             ),
         )
       )} */}
+      {/* buttons */}
+      <ItemActionButton />
     </div>
   );
 };
@@ -131,4 +136,3 @@ export const Item: React.FC = () => {
 //   ITEM_ImagesCarousel: 'images',
 //   ITEM_Contacts: 'contacts',
 // };
-
