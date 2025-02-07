@@ -18,8 +18,8 @@ export const ItemCardM = ({ data }: IItemCardProps) => {
           <div
             style={{
               width: '100%',
+              minHeight: '140px',
               height: '100%',
-              minHeight: '200px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',

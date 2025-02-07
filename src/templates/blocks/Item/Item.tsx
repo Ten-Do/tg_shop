@@ -16,7 +16,7 @@ export const Item: React.FC = () => {
     queryKey: ['items', itemId],
     queryFn: () => getItemById(itemId),
   });
-  console.log(data)
+  console.log(data);
   if (isLoading || !data) return <Loader />;
   return (
     <div className="Item">
@@ -94,7 +94,7 @@ export const Item: React.FC = () => {
         )
       )} */}
       {/* buttons */}
-      <ItemActionButton />
+      <ItemActionButton itemId={itemId as string} />
     </div>
   );
 };

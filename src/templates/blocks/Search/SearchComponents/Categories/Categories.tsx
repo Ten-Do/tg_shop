@@ -1,7 +1,7 @@
 import { useSearchParams } from 'react-router-dom';
-import './Categories.scss';
 import { useQuery } from '@tanstack/react-query';
 import { getCategories } from '@/actions/categories';
+import './Categories.scss';
 
 export const Categories = () => {
   const { data, isLoading } = useQuery({
@@ -31,14 +31,14 @@ interface ICategoriesItemProps {
 
 const CategoriesItem = ({ category }: ICategoriesItemProps) => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const isActive = searchParams.get('category') === category.name;
+  const isActive = searchParams.get('category') === String(category.id);
   const cn = 'Categories-Item' + (isActive ? ' Categories-Item_active' : '');
   return (
     <button
       role="link"
-      onClick={() => setSearchParams({ category: category.name })}
+      onClick={() => setSearchParams({ category: String(category.id) })}
       className={cn}>
-      <p> {category.name}</p>
+      <p>{category.name}</p>
     </button>
   );
 };

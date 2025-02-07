@@ -17,7 +17,7 @@ export const Page = ({ content }: IPageProps) => {
     } else if (item.block_type === 'BANNER_CAROUSEL') {
       return <BannerCarousel key={i} config={item} />;
     } else if (item.block_type === 'ITEM_GRID') {
-      return <ItemGrid key={i} config={item} />;
+      return <ItemGrid key={i} />;
     } else if (item.block_type === 'ITEM_CAROUSEL') {
       return <ItemCarousel key={i} config={item} />;
     } else if (item.block_type === 'ITEM') {

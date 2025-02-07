@@ -1,4 +1,4 @@
-import { MenuBurgerButton } from '@/features/Menu';
+// import { MenuBurgerButton } from '@/features/Menu';
 import { logo } from '@/CONFIG.json';
 import './Header.scss';
 export const Header = () => {
@@ -13,7 +13,7 @@ export const Header = () => {
           height={logo.h}
         />
       </div>
-      <MenuBurgerButton />
+      {/* <MenuBurgerButton /> */}
     </div>
   );
 };
