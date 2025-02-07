@@ -1,61 +1,43 @@
-import { useNavigate } from 'react-router-dom';
-import { CircleButton } from '@/components/CircleButton';
-// import { Loader } from '../../../components/Loader';
+import { useNavigate, useParams } from 'react-router-dom';
+import { Loader } from '../../../components/Loader';
 import { ItemImageCarousel } from './Item.components/Item-ImageCarousel/ItemImageCarousel';
 import { ItemActionButton } from './Item.components/Item-ActionButtons/ItemActionButton';
-import { Accordeon } from '@/components/Accordeon';
-import { InfoDivided } from '@/components/InfoDivided/InfoDivided';
+// import { Accordeon } from '@/components/Accordeon';
+// import { InfoDivided } from '@/components/InfoDivided/InfoDivided';
 import { ItemTags } from './Item.components/Item-Tags/ItemTags';
 import { FiArrowLeft } from 'react-icons/fi';
-
-// type IITemInfoKeys = keyof IItemFullInfo;
-const data = {
-  id: '4',
-  status: 'Active',
-  name: 'Adidas Sneakers White Color',
-  description:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vitae deleniti cupiditate omnis nam, voluptates fugiat accusamus tempore consequuntur incidunt! Dolores perspiciatis reiciendis nesciunt cum dolorum, aut voluptate officia. Quos!',
-  category: 1,
-  price: {
-    value: '5430',
-    currency: 'RUB',
-  },
-  tags: ['adidas', 'summer', 'sport+'],
-  photos: {
-    logo: 'https://i.pinimg.com/originals/a0/1c/49/a01c493ce94cc0132af22f6e98c47945.jpg',
-    extended: [
-      'https://avatars.yandex.net/get-music-content/1781407/0e4d452f.a.13148537-1/m1000x1000?webp=false',
-      'https://i.pinimg.com/originals/a0/1c/49/a01c493ce94cc0132af22f6e98c47945.jpg',
-    ],
-  },
-};
+import { useQuery } from '@tanstack/react-query';
+import { getItemById } from '@/actions/items';
 
 export const Item: React.FC = () => {
   const navigate = useNavigate();
-
+  const itemId = useParams().id;
+  const { data, isLoading } = useQuery({
+    queryKey: ['items', itemId],
+    queryFn: () => getItemById(itemId),
+  });
+  console.log(data)
+  if (isLoading || !data) return <Loader />;
   return (
     <div className="Item">
-      <CircleButton
-        onClick={() => navigate(-1)}
-        label="Назад"
-        className="Item-Back"
-        withoutBg
-        icon={<FiArrowLeft size={32} opacity={0.9} />}
+      <button onClick={() => navigate(-1)} className="Item-Back">
+        <FiArrowLeft size={32} opacity={0.9} />
+      </button>
+      <ItemImageCarousel
+        images={data.media.map((media) => media.storageFileName) || []}
       />
-      <ItemImageCarousel images={data.photos?.extended || []} />
       <div className="Item-MainInfo">
         {/* name */}
         <p className="Item-Name">{data.name}</p>
         {/* price */}
-        <p className="Item-Price">{data.price.value}&#x20bd;</p>
+        <p className="Item-Price">{data.price}&#x20bd;</p>
         {/* description */}
-        <p className="Item-Description">{data.description}</p>
+        {/* <p className="Item-Description">{data.description}</p> */}
       </div>
       <div style={{ marginTop: '20px' }}>
-        {/* Tags */}
-        <ItemTags items={data.tags.map((tag) => ({ label: tag }))} />
+        <ItemTags items={data.categories.map((tag) => ({ label: tag.name }))} />
       </div>
-      <div style={{ marginTop: '20px' }}>
+      {/* <div style={{ marginTop: '20px' }}>
         <p style={{ marginBottom: '10px', font: 'var(--font-heading-h3)' }}>
           Дополнительная информация
         </p>
@@ -67,8 +49,8 @@ export const Item: React.FC = () => {
         <InfoDivided label="Статус" value={data.status} />
         <InfoDivided label="Категория" value={data.category} />
         <InfoDivided label="Статус" value={data.status} />
-      </div>
-      <div style={{ marginTop: '20px' }}>
+      </div> */}
+      {/* <div style={{ marginTop: '20px' }}>
         <Accordeon
           items={[
             {
@@ -89,7 +71,7 @@ export const Item: React.FC = () => {
             },
           ]}
         />
-      </div>
+      </div> */}
 
       {/* <Loader /> */}
       {/* {isFetching ? (
@@ -116,23 +98,3 @@ export const Item: React.FC = () => {
     </div>
   );
 };
-
-// const contextDict: { [key in IITemInfoKeys]?: IItemBlockType } = {
-//   mainInfo: 'ITEM_MainInfo',
-//   variants: 'ITEM_Variants',
-//   tags: 'ITEM_Tags',
-//   details: 'ITEM_Details',
-//   additional: 'ITEM_AdditionalInfo',
-//   images: 'ITEM_ImagesCarousel',
-//   contacts: 'ITEM_Contacts',
-// };
-
-// const revertContextDict: { [key in IItemBlockType]?: IITemInfoKeys } = {
-//   ITEM_MainInfo: 'mainInfo',
-//   ITEM_Variants: 'variants',
-//   ITEM_Tags: 'tags',
-//   ITEM_Details: 'details',
-//   ITEM_AdditionalInfo: 'additional',
-//   ITEM_ImagesCarousel: 'images',
-//   ITEM_Contacts: 'contacts',
-// };

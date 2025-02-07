@@ -1,2 +1,1 @@
-export { TWAID } from "./TWAID";
-export { useTwaId } from "./context";
+export { TWA_KEY, getTwaId } from './utils';

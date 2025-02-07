@@ -63,38 +63,3 @@ export type IBlockType =
 // NAVIGATION
 
 export type INavigationOption = 'HOME' | 'CATALOG' | 'CART' | 'FAVORITE';
-
-//============== API ==============\\
-export type IResource = 'categories' | 'goods';
-export type IMediaType = 'GOOD';
-
-export interface IMedia {
-  id: number;
-  name: string;
-  size: number;
-  storageFileName: string;
-  mediaType: IMediaType;
-}
-
-export interface IRetailer {
-  id: number;
-  name: string;
-  enabled: boolean;
-}
-
-export interface ICaegory {
-  id: number;
-  name: string;
-  status: string;
-  retailer: IRetailer;
-}
-
-export interface IItem {
-  id: number;
-  name: string;
-  price: number;
-  enabled: boolean;
-  categories: ICaegory[];
-  retailer: IRetailer;
-  media: IMedia[];
-}

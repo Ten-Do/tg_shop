@@ -1,34 +1,18 @@
 import { useSearchParams } from 'react-router-dom';
 import './Categories.scss';
-
-const categories = [
-  {
-    id: 1,
-    name: 'Категория 1',
-  },
-  {
-    id: 2,
-    name: 'Категория 2',
-  },
-  {
-    id: 3,
-    name: 'Категория 3',
-  },
-  {
-    id: 4,
-    name: 'Категория 4',
-  },
-  {
-    id: 5,
-    name: 'Категория 5',
-  },
-];
+import { useQuery } from '@tanstack/react-query';
+import { getCategories } from '@/actions/categories';
 
 export const Categories = () => {
+  const { data, isLoading } = useQuery({
+    queryKey: ['categories'],
+    queryFn: getCategories,
+  });
+  if (isLoading || !data?.content.length) return null;
   return (
     <div className="Categories-Container">
       <ul className="Categories">
-        {categories.map((category) => (
+        {data?.content.map((category) => (
           <li key={category.id}>
             <CategoriesItem category={category} />
           </li>

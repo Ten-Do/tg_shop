@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.66.0",
     "@telegram-apps/sdk-react": "^3.0.1",
     "@types/react-lottie": "^1.2.10",
     "embla-carousel": "^8.5.2",

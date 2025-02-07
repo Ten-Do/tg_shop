@@ -5,11 +5,12 @@ import { pages } from '@/CONFIG.json';
 import { Page } from '@/templates/Page/Page';
 import { IBlockType } from '@/types';
 import { Root } from './Root';
+import { TWA_KEY } from '@/libs/twa_id';
 // import { IPageItem } from '@/types';
 
 const routes = Object.keys(pages).map((key) => {
   return {
-    path: key,
+    path: '/:' + TWA_KEY + key,
     element: (
       <Page
         content={pages[key as keyof typeof pages].content as IBlockType[]}
@@ -20,7 +21,7 @@ const routes = Object.keys(pages).map((key) => {
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/:' + TWA_KEY,
     element: <Root />,
     errorElement: <ErrorPage />,
     children: routes,

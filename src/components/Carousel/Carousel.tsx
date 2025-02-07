@@ -23,8 +23,10 @@ export const Carousel: React.FC<CarouselProps> = ({ slides, options }) => {
     <section className="Carousel">
       <div className="Carousel-Viewport" ref={emblaRef}>
         <ul className="Carousel-Container">
-          {slides.map((slide) => (
-            <li className="Carousel-Slide">{slide}</li>
+          {slides.map((slide, i) => (
+            <li key={i} className="Carousel-Slide">
+              {slide}
+            </li>
           ))}
         </ul>
       </div>

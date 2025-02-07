@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ItemCardL } from '@/features/ItemCard/ItemCard-L';
 import { IBlockTypeItemCarousel } from '@/types';
-import { buildUrlFromTemplate } from '@/features/shared/utils/buildUrlFromTemplate';
 import './ItemCarousel.scss';
 
 export interface IItemCarouselProps {
@@ -104,7 +103,7 @@ export const ItemCarousel = ({ config }: IItemCarouselProps) => {
       <div className="ItemCarousel">
         {data.map((item) => (
           <div key={item.id} className="ItemCarousel-Item">
-            <Link to={buildUrlFromTemplate(config.item?.link_to, item)}>
+            <Link to={'item/' + item.id}>
               <ItemCardL data={item} />
             </Link>
           </div>

@@ -24,6 +24,14 @@ const getIcon = (icon: INavigationOption) => {
   }
 };
 
+const removeSlash = (path: string): string => {
+  if (path.startsWith('/')) {
+    return path.slice(1);
+  }
+
+  return path;
+};
+
 export const NavigationItem: React.FC<NavigationItemProps> = ({
   path,
   icon,
@@ -32,7 +40,7 @@ export const NavigationItem: React.FC<NavigationItemProps> = ({
 
   return (
     <Link
-      to={path}
+      to={removeSlash(path)}
       className={
         'Navigation-Item' +
         (location.pathname === path ? ' Navigation-Item_active' : '')
